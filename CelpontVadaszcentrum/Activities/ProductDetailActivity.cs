@@ -31,7 +31,7 @@ namespace CelpontVadaszcentrum.Activities
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ProductDetailLayout);
             ProductDetailService = new ProductDetailService();
-            Product = ProductDetailService.GetProductByID(221);
+            Product = ProductDetailService.GetProductByID(50);
             FindMyViews();
             SetViews();
         }
