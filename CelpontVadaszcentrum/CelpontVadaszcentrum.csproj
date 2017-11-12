@@ -59,16 +59,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\CategoriesListActivity.cs" />
+    <Compile Include="Activities\MainMenuActivity.cs" />
+    <Compile Include="Activities\NewsActivity.cs" />
+    <Compile Include="Activities\NewsletterActivity.cs" />
     <Compile Include="Activities\ProductDetailActivity.cs" />
+    <Compile Include="Activities\ProductListByCategoryActivity.cs" />
+    <Compile Include="Adapters\ProductListByCategoryAdapter.cs" />
     <Compile Include="Adapters\CategoriesListAdapter.cs" />
     <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\ProductPreview.cs" />
     <Compile Include="Model\Product.cs" />
+    <Compile Include="Repository\ProductPreviewRepository.cs" />
     <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\NewsletterRepository.cs" />
     <Compile Include="Repository\ProductDetailRepository.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ProductPreviewService.cs" />
     <Compile Include="Service\CategoryService.cs" />
+    <Compile Include="Service\NewsletterService.cs" />
     <Compile Include="Service\ProductDetailService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -78,9 +88,22 @@
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\CategoryRowView.axml" />
     <AndroidResource Include="Resources\layout\ProductDetailLayout.axml" />
+    <AndroidResource Include="Resources\layout\MainMenuLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\NewsLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\NewsletterLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ProductPreviewRowView.axml" />
+    <AndroidResource Include="Resources\layout\ProductPreviewListLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml">
+    <AndroidResource Include="Resources\layout\CategoriesListLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -19,8 +19,8 @@ using Newtonsoft.Json;
 
 namespace CelpontVadaszcentrum.Activities
 {
-    [Activity(Label = "CelpontVadaszcentrum", MainLauncher = true, Icon = "@drawable/icon")]
-    public class MainActivity : Activity
+    [Activity(Label = "CategoriesListActivity")]
+    public class CategoriesListActivity : Activity
     {
         private CategoryService CategoryService;
         private ListView CategoriesListView;
@@ -30,14 +30,14 @@ namespace CelpontVadaszcentrum.Activities
         protected override async void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.CategoriesListLayout);
 
             CategoryService = new CategoryService();
             Categories = CategoryService.GetAllCategories();
             CategoriesListView = FindViewById<ListView>(Resource.Id.CategoriesList);
             CategoriesListView.Adapter = new CategoriesListAdapter(this, Categories);
             CategoriesListView.ItemClick += CategoriesListView_ItemClick;
-            StartActivity(typeof (ProductDetailActivity));
+            //StartActivity(typeof (ProductDetailActivity));
 
         }
 
@@ -50,8 +50,17 @@ namespace CelpontVadaszcentrum.Activities
             }
             else
             {
-                CategoriesListView.Adapter = new CategoriesListAdapter(this, ClickedCategory.Children[e.Position].Children);
-                ClickedCategory = ClickedCategory.Children[e.Position];
+                if (ClickedCategory.Children[e.Position].Children.Count != 0)
+                {
+                    CategoriesListView.Adapter = new CategoriesListAdapter(this, ClickedCategory.Children[e.Position].Children);
+                    ClickedCategory = ClickedCategory.Children[e.Position];
+                }
+                else
+                {
+                    var productListByCategoryActivity = new Intent(this, typeof(ProductListByCategoryActivity));
+                    productListByCategoryActivity.PutExtra("CategoryID", ClickedCategory.Children[e.Position].Id_Category);
+                    StartActivity(productListByCategoryActivity);
+                }
             }
            
            

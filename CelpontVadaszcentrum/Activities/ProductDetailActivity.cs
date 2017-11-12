@@ -25,13 +25,16 @@ namespace CelpontVadaszcentrum.Activities
         private ImageView Image;
         private ProductDetailService ProductDetailService;
         private Product Product;
+        private int ProductID;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.ProductDetailLayout);
+
+            ProductID = Intent.GetIntExtra("ProductID", 0);
             ProductDetailService = new ProductDetailService();
-            Product = ProductDetailService.GetProductByID(50);
+            Product = ProductDetailService.GetProductByID(ProductID);
             FindMyViews();
             SetViews();
         }
