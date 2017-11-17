@@ -17,19 +17,22 @@ namespace CelpontVadaszcentrum.Repository
 {
     public class ProductImageURLsRepository
     {
-        private List<ProductImageDetail> temp = new List<ProductImageDetail>();
-        private List<String> URLs = new List<string>();
+        private List<ProductImageDetail> temp;
+        private List<String> URLs;
 
         string url = "http://celpont.vadaszcentrum.hu/JSON_API/Images.php?id=";
 
         public ProductImageURLsRepository()
         {
-            
-        }
+            temp = new List<ProductImageDetail>();
+            URLs = new List<string>();
+
+    }
 
         public List<string> GetProductImageUrlsByProductId(int ID, string name)
         {
             Task.Run(() => this.LoadDataAsync(url+ID)).Wait();
+            URLs = new List<string>();
             foreach (var item in temp)
             {
                 URLs.Add("http://celpont.vadaszcentrum.hu/" + item.id_image + "-thickbox_leoconv/" + name + ".jpg");

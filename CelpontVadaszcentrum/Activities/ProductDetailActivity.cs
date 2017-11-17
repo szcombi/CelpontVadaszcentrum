@@ -15,6 +15,7 @@ using CelpontVadaszcentrum.Service;
 using Java.Net;
 using CelpontVadaszcentrum.Utility;
 using Android.Graphics;
+using Square.Picasso;
 
 namespace CelpontVadaszcentrum.Activities
 {
@@ -29,6 +30,8 @@ namespace CelpontVadaszcentrum.Activities
         private ProductImageURLsService ProductImageURLsService;
         private Product Product;
         private int ProductID;
+        private int ImageId;
+        //private List<Bitmap> Images;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -41,11 +44,30 @@ namespace CelpontVadaszcentrum.Activities
             Product = ProductDetailService.GetProductByID(ProductID);
 
             ProductImageURLsService = new ProductImageURLsService();
-            
+
+            Product.Images = null;
             Product.Images = ProductImageURLsService.GetProductImageUrlsByID(ProductID, Product.Name);
 
             FindMyViews();
+            Image.Click += Image_Click;
             SetViews();
+        }
+
+        private void Image_Click(object sender, EventArgs e)
+        {
+            //if(ImageId < Images.Count-1)
+            if (ImageId < Product.Images.Count - 1)
+            {
+                ImageId++;                
+            }
+            else {
+                ImageId = 0;
+            }
+            //Image.SetImageBitmap(Images[ImageId]);
+            Picasso.With(this)
+            .Load(Product.Images[ImageId])
+            .MemoryPolicy(MemoryPolicy.NoCache)
+            .Into(Image);
         }
 
         private void SetViews()
@@ -53,8 +75,27 @@ namespace CelpontVadaszcentrum.Activities
             Name.Text = Product.Name;
             Price.Text = Product.Price.ToString("## ###")+" Ft";
             Description.TextFormatted = Html.FromHtml(Product.Description);
-            Bitmap imageBitmap = ImageHelper.GetImageBitmapFromUrl(Product.Images[1]);
-            Image.SetImageBitmap(imageBitmap);
+
+
+            Picasso.With(this)
+            .Load(Product.Images[0])
+            .MemoryPolicy(MemoryPolicy.NoCache)
+            .Into(Image);
+            ImageId = 0;
+
+            /*
+            Images = new List<Bitmap>();
+
+
+            foreach (var url in Product.Images)
+            {
+                Images.Add(ImageHelper.GetImageBitmapFromUrl(url));
+            }
+            Image.Id = 0;
+            Image.SetImageBitmap(Images[0]);
+            */
+
+
             //string new_string = Regex.Replace(Description.Text, @"\n+", "\n");
             // Description.Text = new_string;
         }
