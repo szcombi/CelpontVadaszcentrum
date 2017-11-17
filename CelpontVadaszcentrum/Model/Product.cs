@@ -17,6 +17,8 @@ namespace CelpontVadaszcentrum.Model
 
         public double Price { get; set; }
 
+        public List<string> Images { get; set;}
+
 
 
     }

@@ -57,12 +57,9 @@ namespace CelpontVadaszcentrum.Adapters
                 convertView = context.LayoutInflater.Inflate(Resource.Layout.ProductPreviewRowView, null);
             }
 
-            //convertView.FindViewById<TextView>(Resource.Id.hotDogNameTextView).Text = item.Name;
-            //convertView.FindViewById<TextView>(Resource.Id.shortDescriptionTextView).Text = item.ShortDescription;
-            //convertView.FindViewById<TextView>(Resource.Id.priceTextView).Text = "$ " + item.Price;
             //convertView.FindViewById<ImageView>(Resource.Id.hotDogImageView).SetImageBitmap(imageBitmap);
             convertView.FindViewById<TextView>(Resource.Id.ProductNameTextView).Text = item.Name;
-            convertView.FindViewById<TextView>(Resource.Id.ProductPriceTextView).Text = item.Price + " Ft";
+            convertView.FindViewById<TextView>(Resource.Id.ProductPriceTextView).Text = item.Price.ToString("## ###") + " Ft";
                 
             return convertView;
         }

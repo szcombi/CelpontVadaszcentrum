@@ -13,6 +13,8 @@ using Android.Widget;
 using CelpontVadaszcentrum.Model;
 using CelpontVadaszcentrum.Service;
 using Java.Net;
+using CelpontVadaszcentrum.Utility;
+using Android.Graphics;
 
 namespace CelpontVadaszcentrum.Activities
 {
@@ -24,6 +26,7 @@ namespace CelpontVadaszcentrum.Activities
         private TextView Description;
         private ImageView Image;
         private ProductDetailService ProductDetailService;
+        private ProductImageURLsService ProductImageURLsService;
         private Product Product;
         private int ProductID;
 
@@ -33,8 +36,14 @@ namespace CelpontVadaszcentrum.Activities
             SetContentView(Resource.Layout.ProductDetailLayout);
 
             ProductID = Intent.GetIntExtra("ProductID", 0);
+
             ProductDetailService = new ProductDetailService();
             Product = ProductDetailService.GetProductByID(ProductID);
+
+            ProductImageURLsService = new ProductImageURLsService();
+            
+            Product.Images = ProductImageURLsService.GetProductImageUrlsByID(ProductID, Product.Name);
+
             FindMyViews();
             SetViews();
         }
@@ -44,7 +53,8 @@ namespace CelpontVadaszcentrum.Activities
             Name.Text = Product.Name;
             Price.Text = Product.Price.ToString("## ###")+" Ft";
             Description.TextFormatted = Html.FromHtml(Product.Description);
-            //Image.SetImageBitmap();
+            Bitmap imageBitmap = ImageHelper.GetImageBitmapFromUrl(Product.Images[1]);
+            Image.SetImageBitmap(imageBitmap);
             //string new_string = Regex.Replace(Description.Text, @"\n+", "\n");
             // Description.Text = new_string;
         }
