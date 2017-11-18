@@ -9,10 +9,11 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using CelpontVadaszcentrum.Repository;
 
 namespace CelpontVadaszcentrum.Activities
 {
-    [Activity(Label = "CelpontVadaszcentrum", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "CelpontVadaszcentrum")]
     public class MainMenuActivity : Activity
     {
         private Button ProductCatalog;
@@ -44,7 +45,10 @@ namespace CelpontVadaszcentrum.Activities
 
         private void Discounts_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var productListByCategoryActivity = new Intent(this, typeof(ProductListByCategoryActivity));
+            productListByCategoryActivity.PutExtra("CategoryID", 0);
+            productListByCategoryActivity.PutExtra("CategoryName", "Akciós termékek");
+            StartActivity(productListByCategoryActivity);
         }
 
         private void News_Click(object sender, EventArgs e)

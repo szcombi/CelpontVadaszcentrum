@@ -1,22 +1,14 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Text;
-using Android.Views;
 using Android.Widget;
 using CelpontVadaszcentrum.Model;
 using CelpontVadaszcentrum.Service;
-using Java.Net;
-using CelpontVadaszcentrum.Utility;
-using Android.Graphics;
 using Square.Picasso;
 using AndroidHUD;
+using System.Text.RegularExpressions;
 
 namespace CelpontVadaszcentrum.Activities
 {
@@ -27,6 +19,7 @@ namespace CelpontVadaszcentrum.Activities
         private TextView Price;
         private TextView Description;
         private ImageView Image;
+        private TextView NumberOfImages;
         private ProductDetailService ProductDetailService;
         private ProductImageURLsService ProductImageURLsService;
         private Product Product;
@@ -69,8 +62,9 @@ namespace CelpontVadaszcentrum.Activities
             //Image.SetImageBitmap(Images[ImageId]);
             Picasso.With(this)
             .Load(Product.Images[ImageId])
-            .MemoryPolicy(MemoryPolicy.NoCache)
             .Into(Image);
+
+            NumberOfImages.Text = (ImageId + 1) + " / " + Product.Images.Count;
         }
 
         private void SetViews()
@@ -78,11 +72,11 @@ namespace CelpontVadaszcentrum.Activities
             Name.Text = Product.Name;
             Price.Text = Product.Price.ToString("## ###")+" Ft";
             Description.TextFormatted = Html.FromHtml(Product.Description);
+            NumberOfImages.Text = "1 / " + Product.Images.Count;
 
 
             Picasso.With(this)
             .Load(Product.Images[0])
-            .MemoryPolicy(MemoryPolicy.NoCache)
             .Into(Image);
             ImageId = 0;
 
@@ -99,8 +93,8 @@ namespace CelpontVadaszcentrum.Activities
             */
 
 
-            //string new_string = Regex.Replace(Description.Text, @"\n+", "\n");
-            // Description.Text = new_string;
+            string new_string = Regex.Replace(Description.Text, @"\n+", "\n");
+            Description.Text = new_string;
         }
 
         private void FindMyViews()
@@ -109,6 +103,8 @@ namespace CelpontVadaszcentrum.Activities
             Price = FindViewById<TextView>(Resource.Id.txtPrice);
             Description = FindViewById<TextView>(Resource.Id.txtDescription);
             Image = FindViewById<ImageView>(Resource.Id.imgProduct);
+            NumberOfImages = FindViewById<TextView>(Resource.Id.numberOfImagesTXT);
+
         }
     }
 }

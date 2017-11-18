@@ -81,6 +81,7 @@
     <Compile Include="Activities\NewsletterActivity.cs" />
     <Compile Include="Activities\ProductDetailActivity.cs" />
     <Compile Include="Activities\ProductListByCategoryActivity.cs" />
+    <Compile Include="Activities\SplashActivity.cs" />
     <Compile Include="Adapters\ProductListByCategoryAdapter.cs" />
     <Compile Include="Adapters\CategoriesListAdapter.cs" />
     <Compile Include="Model\Category.cs" />
@@ -89,16 +90,19 @@
     <Compile Include="Model\Product.cs" />
     <Compile Include="Repository\ProductImageURLsRepository.cs" />
     <Compile Include="Repository\ProductPreviewRepository.cs" />
+    <Compile Include="Repository\DiscountedProductsPreviewRepository.cs" />
     <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\NewsletterRepository.cs" />
     <Compile Include="Repository\ProductDetailRepository.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\ProductImageURLsService.cs" />
+    <Compile Include="Service\DiscountedProductsPreviewService.cs" />
     <Compile Include="Service\ProductPreviewService.cs" />
     <Compile Include="Service\CategoryService.cs" />
     <Compile Include="Service\NewsletterService.cs" />
     <Compile Include="Service\ProductDetailService.cs" />
+    <Compile Include="Utility\CategoryHelper.cs" />
     <Compile Include="Utility\ImageHelper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +139,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Splash.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\style.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\SplashBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

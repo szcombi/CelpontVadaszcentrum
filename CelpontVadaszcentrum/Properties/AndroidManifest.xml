@@ -2,5 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="CelpontVadaszcentrum.CelpontVadaszcentrum" android:versionCode="1" android:versionName="1.0" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="16" />
 	<uses-permission android:name="android.permission.INTERNET" />
-	<application android:label="CelpontVadaszcentrum"></application>
+	<application android:label="CelpontVadaszcentrum"
+               android:theme="@android:style/Theme.Holo.Light.NoActionBar" ></application>
 </manifest>

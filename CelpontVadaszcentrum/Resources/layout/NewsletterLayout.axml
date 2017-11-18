@@ -3,21 +3,55 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
     android:minWidth="25px"
     android:minHeight="25px">
-    <EditText
+  <TextView
+        android:text="Hírlevél"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/NewsletterHeadlineTXT" />
+  <TextView
+      android:text="Iratkozzon fel hírlevelünkre, hogy elsők között értesülhessen különleges ajánlatainkról!"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/NewsletterDescriptionTXT"/>
+    <LinearLayout 
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:orientation="horizontal">
+      
+        <TextView
+      android:text="E-mail: "
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"     
+      android:id="@+id/emailAdressTXT"/>
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/emailTXT" />
+
+
+     </LinearLayout>
     <Button
         android:text="Feliratkozás"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/submitEmailButton" />
+        android:id="@+id/submitEmailButton" />   
     <TextView
         android:text=""
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/responseTXT" />
+  
 </LinearLayout>

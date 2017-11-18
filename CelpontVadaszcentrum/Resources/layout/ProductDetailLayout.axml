@@ -3,9 +3,11 @@
     android:id="@+id/mainScrollView"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:background="#FCD972"
+    android:background="#FFF"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
@@ -18,6 +20,14 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_gravity="center_horizontal" />
+        <TextView
+            android:text="1 / 2"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:id="@+id/numberOfImagesTXT" />
         <RelativeLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
@@ -28,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txtProductName"
                 android:textColor="@android:color/black"
-                android:paddingTop="20dp"
+                android:paddingTop="5dp"
                 android:textSize="20dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerInParent="true"
@@ -39,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/txtPrice"
                 android:textColor="@android:color/black"
-                android:paddingTop="20dp"
+                android:paddingTop="5dp"
                 android:textSize="16dp"
                 android:textStyle="bold"
                 android:layout_alignParentRight="true"
