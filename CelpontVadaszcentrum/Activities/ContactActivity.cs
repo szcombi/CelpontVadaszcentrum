@@ -37,9 +37,14 @@ namespace CelpontVadaszcentrum.Activities
 
         private void Maps_Click(object sender, EventArgs e)
         {
+            /*
             var geoUri = Android.Net.Uri.Parse("geo:46.9873956,16.6166643,17");            
             var mapIntent = new Intent(Intent.ActionView, geoUri);
-            StartActivity(mapIntent);
+            StartActivity(mapIntent);*/
+
+            var uri = Android.Net.Uri.Parse("https://www.google.com/maps/d/viewer?mid=1sBCA8XrcELFIwkBD8K0kR_NJ8cw&hl=hu&ll=46.987061000000004%2C16.61850800000002&z=17");
+            var intent = new Intent(Intent.ActionView, uri);
+            StartActivity(intent);
         }
 
         private void Email2_Click(object sender, EventArgs e)
