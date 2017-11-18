@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/catalogButton" />
-         <Button
+        <Button
             android:text="Akciós Termékek"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,5 +40,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/newsletterButton" />
+      <Button
+            android:text="Kapcsolat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/contactButton" />
     </LinearLayout>
 </LinearLayout>

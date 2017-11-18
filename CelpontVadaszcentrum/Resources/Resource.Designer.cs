@@ -160,89 +160,122 @@ namespace CelpontVadaszcentrum
 			// aapt resource value: 0x7f060002
 			public const int CategoryNameTextView = 2131099650;
 			
-			// aapt resource value: 0x7f06000e
-			public const int NewsletterDescriptionTXT = 2131099662;
+			// aapt resource value: 0x7f060019
+			public const int NewsletterDescriptionTXT = 2131099673;
 			
-			// aapt resource value: 0x7f06000d
-			public const int NewsletterHeadlineTXT = 2131099661;
+			// aapt resource value: 0x7f060018
+			public const int NewsletterHeadlineTXT = 2131099672;
 			
-			// aapt resource value: 0x7f06001c
-			public const int ProductNameTextView = 2131099676;
+			// aapt resource value: 0x7f060027
+			public const int ProductNameTextView = 2131099687;
 			
-			// aapt resource value: 0x7f06001b
-			public const int ProductPreviewList = 2131099675;
+			// aapt resource value: 0x7f060026
+			public const int ProductPreviewList = 2131099686;
 			
-			// aapt resource value: 0x7f06001d
-			public const int ProductPriceTextView = 2131099677;
-			
-			// aapt resource value: 0x7f060008
-			public const int catalogButton = 2131099656;
-			
-			// aapt resource value: 0x7f060009
-			public const int discountsButton = 2131099657;
-			
-			// aapt resource value: 0x7f06000f
-			public const int emailAdressTXT = 2131099663;
-			
-			// aapt resource value: 0x7f060010
-			public const int emailTXT = 2131099664;
-			
-			// aapt resource value: 0x7f060015
-			public const int imgProduct = 2131099669;
-			
-			// aapt resource value: 0x7f060005
-			public const int loadingImage = 2131099653;
-			
-			// aapt resource value: 0x7f060003
-			public const int loadingProgressBar = 2131099651;
-			
-			// aapt resource value: 0x7f060006
-			public const int loadingProgressWheel = 2131099654;
-			
-			// aapt resource value: 0x7f060007
-			public const int logoImageView = 2131099655;
-			
-			// aapt resource value: 0x7f060014
-			public const int mainLinearLayout = 2131099668;
-			
-			// aapt resource value: 0x7f060013
-			public const int mainScrollView = 2131099667;
-			
-			// aapt resource value: 0x7f06000a
-			public const int newsButton = 2131099658;
-			
-			// aapt resource value: 0x7f06000c
-			public const int newsWebView = 2131099660;
-			
-			// aapt resource value: 0x7f06000b
-			public const int newsletterButton = 2131099659;
-			
-			// aapt resource value: 0x7f060016
-			public const int numberOfImagesTXT = 2131099670;
+			// aapt resource value: 0x7f060028
+			public const int ProductPriceTextView = 2131099688;
 			
 			// aapt resource value: 0x7f060012
-			public const int responseTXT = 2131099666;
+			public const int catalogButton = 2131099666;
+			
+			// aapt resource value: 0x7f060016
+			public const int contactButton = 2131099670;
+			
+			// aapt resource value: 0x7f060013
+			public const int discountsButton = 2131099667;
+			
+			// aapt resource value: 0x7f06000b
+			public const int email1TXT = 2131099659;
+			
+			// aapt resource value: 0x7f06000c
+			public const int email2TXT = 2131099660;
 			
 			// aapt resource value: 0x7f06001a
-			public const int selectedCategoryInPreviewTXT = 2131099674;
+			public const int emailAdressTXT = 2131099674;
+			
+			// aapt resource value: 0x7f06001b
+			public const int emailTXT = 2131099675;
+			
+			// aapt resource value: 0x7f060020
+			public const int imgProduct = 2131099680;
+			
+			// aapt resource value: 0x7f06000f
+			public const int loadingImage = 2131099663;
+			
+			// aapt resource value: 0x7f06000d
+			public const int loadingProgressBar = 2131099661;
+			
+			// aapt resource value: 0x7f060010
+			public const int loadingProgressWheel = 2131099664;
+			
+			// aapt resource value: 0x7f060011
+			public const int logoImageView = 2131099665;
+			
+			// aapt resource value: 0x7f06001f
+			public const int mainLinearLayout = 2131099679;
+			
+			// aapt resource value: 0x7f06001e
+			public const int mainScrollView = 2131099678;
+			
+			// aapt resource value: 0x7f060014
+			public const int newsButton = 2131099668;
+			
+			// aapt resource value: 0x7f060017
+			public const int newsWebView = 2131099671;
+			
+			// aapt resource value: 0x7f060015
+			public const int newsletterButton = 2131099669;
+			
+			// aapt resource value: 0x7f060021
+			public const int numberOfImagesTXT = 2131099681;
+			
+			// aapt resource value: 0x7f060009
+			public const int phoneNumberTXT = 2131099657;
+			
+			// aapt resource value: 0x7f06001d
+			public const int responseTXT = 2131099677;
+			
+			// aapt resource value: 0x7f060025
+			public const int selectedCategoryInPreviewTXT = 2131099685;
 			
 			// aapt resource value: 0x7f060000
 			public const int selectedCategoryTXT = 2131099648;
 			
-			// aapt resource value: 0x7f060011
-			public const int submitEmailButton = 2131099665;
+			// aapt resource value: 0x7f06001c
+			public const int submitEmailButton = 2131099676;
+			
+			// aapt resource value: 0x7f060003
+			public const int textView1 = 2131099651;
 			
 			// aapt resource value: 0x7f060004
-			public const int textViewStatus = 2131099652;
+			public const int textView2 = 2131099652;
 			
-			// aapt resource value: 0x7f060019
-			public const int txtDescription = 2131099673;
+			// aapt resource value: 0x7f060005
+			public const int textView3 = 2131099653;
 			
-			// aapt resource value: 0x7f060018
-			public const int txtPrice = 2131099672;
+			// aapt resource value: 0x7f060006
+			public const int textView4 = 2131099654;
 			
-			// aapt resource value: 0x7f060017
-			public const int txtProductName = 2131099671;
+			// aapt resource value: 0x7f060007
+			public const int textView5 = 2131099655;
+			
+			// aapt resource value: 0x7f060008
+			public const int textView6 = 2131099656;
+			
+			// aapt resource value: 0x7f06000a
+			public const int textView7 = 2131099658;
+			
+			// aapt resource value: 0x7f06000e
+			public const int textViewStatus = 2131099662;
+			
+			// aapt resource value: 0x7f060024
+			public const int txtDescription = 2131099684;
+			
+			// aapt resource value: 0x7f060023
+			public const int txtPrice = 2131099683;
+			
+			// aapt resource value: 0x7f060022
+			public const int txtProductName = 2131099682;
 			
 			static Id()
 			{
@@ -264,31 +297,34 @@ namespace CelpontVadaszcentrum
 			public const int CategoryRowView = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int loading = 2130903042;
+			public const int ContactLayout = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int loadingimage = 2130903043;
+			public const int loading = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int loadingprogress = 2130903044;
+			public const int loadingimage = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int MainMenuLayout = 2130903045;
+			public const int loadingprogress = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int NewsLayout = 2130903046;
+			public const int MainMenuLayout = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int NewsletterLayout = 2130903047;
+			public const int NewsLayout = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int ProductDetailLayout = 2130903048;
+			public const int NewsletterLayout = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int ProductPreviewListLayout = 2130903049;
+			public const int ProductDetailLayout = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int ProductPreviewRowView = 2130903050;
+			public const int ProductPreviewListLayout = 2130903050;
+			
+			// aapt resource value: 0x7f03000b
+			public const int ProductPreviewRowView = 2130903051;
 			
 			static Layout()
 			{

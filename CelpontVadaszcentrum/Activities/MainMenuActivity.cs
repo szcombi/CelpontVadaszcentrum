@@ -20,6 +20,7 @@ namespace CelpontVadaszcentrum.Activities
         private Button News;
         private Button Discounts;
         private Button Newsletter;
+        private Button Contact;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -36,6 +37,12 @@ namespace CelpontVadaszcentrum.Activities
             News.Click += News_Click;
             Discounts.Click += Discounts_Click;
             Newsletter.Click += Newsletter_Click;
+            Contact.Click += Contact_Click;
+        }
+
+        private void Contact_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(ContactActivity));
         }
 
         private void Newsletter_Click(object sender, EventArgs e)
@@ -67,6 +74,7 @@ namespace CelpontVadaszcentrum.Activities
             News = FindViewById<Button>(Resource.Id.newsButton);
             Discounts = FindViewById<Button>(Resource.Id.discountsButton);
             Newsletter = FindViewById<Button>(Resource.Id.newsletterButton);
+            Contact = FindViewById<Button>(Resource.Id.contactButton);
         }
     }
 }
