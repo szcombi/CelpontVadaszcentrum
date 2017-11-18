@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Webkit;
+using AndroidHUD;
 
 namespace CelpontVadaszcentrum.Activities
 {
@@ -19,10 +20,12 @@ namespace CelpontVadaszcentrum.Activities
         private WebView webView;
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            AndHUD.Shared.Show(this, "Hírek betöltése...", -1, MaskType.Clear);
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.NewsLayout);
             FindMyViews();
             webView.LoadUrl("http://celpont.vadaszcentrum.hu/hirek.html");
+            AndHUD.Shared.Dismiss(this);
 
         }
 

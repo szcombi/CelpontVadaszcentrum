@@ -18,7 +18,7 @@ namespace CelpontVadaszcentrum.Repository
     public class ProductImageURLsRepository
     {
         private List<ProductImageDetail> temp;
-        private List<String> URLs;
+        private List<string> URLs;
 
         string url = "http://celpont.vadaszcentrum.hu/JSON_API/Images.php?id=";
 

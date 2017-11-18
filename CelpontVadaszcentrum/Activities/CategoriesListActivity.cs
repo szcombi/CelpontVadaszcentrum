@@ -16,6 +16,7 @@ using CelpontVadaszcentrum.Model;
 using CelpontVadaszcentrum.Service;
 using Javax.Security.Auth;
 using Newtonsoft.Json;
+using AndroidHUD;
 
 namespace CelpontVadaszcentrum.Activities
 {
@@ -31,9 +32,10 @@ namespace CelpontVadaszcentrum.Activities
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.CategoriesListLayout);
-
+            AndHUD.Shared.Show(this, "Termékkategóriák betöltése...", -1, MaskType.Clear);
             CategoryService = new CategoryService();
             Categories = CategoryService.GetAllCategories();
+            AndHUD.Shared.Dismiss(this);
             CategoriesListView = FindViewById<ListView>(Resource.Id.CategoriesList);
             CategoriesListView.Adapter = new CategoriesListAdapter(this, Categories);
             CategoriesListView.ItemClick += CategoriesListView_ItemClick;

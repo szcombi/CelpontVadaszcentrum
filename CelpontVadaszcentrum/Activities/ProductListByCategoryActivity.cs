@@ -12,6 +12,7 @@ using Android.Widget;
 using CelpontVadaszcentrum.Service;
 using CelpontVadaszcentrum.Model;
 using CelpontVadaszcentrum.Adapters;
+using AndroidHUD;
 
 namespace CelpontVadaszcentrum.Activities
 {
@@ -30,7 +31,9 @@ namespace CelpontVadaszcentrum.Activities
 
             CategoryID = Intent.GetIntExtra("CategoryID",0);
 
+            AndHUD.Shared.Show(this, "Termékek betöltése...", -1, MaskType.Clear);
             ProductPreviewService = new ProductPreviewService();
+            AndHUD.Shared.Dismiss(this);
 
             ProductPreviews = ProductPreviewService.GetProductsByCategoryID(CategoryID);
             ProductPreviewsListView = FindViewById<ListView>(Resource.Id.ProductPreviewList);

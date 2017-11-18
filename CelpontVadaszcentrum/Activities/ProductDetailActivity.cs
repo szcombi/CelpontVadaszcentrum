@@ -16,6 +16,7 @@ using Java.Net;
 using CelpontVadaszcentrum.Utility;
 using Android.Graphics;
 using Square.Picasso;
+using AndroidHUD;
 
 namespace CelpontVadaszcentrum.Activities
 {
@@ -40,8 +41,10 @@ namespace CelpontVadaszcentrum.Activities
 
             ProductID = Intent.GetIntExtra("ProductID", 0);
 
+            AndHUD.Shared.Show(this, "Termék betöltése...", -1, MaskType.Clear);
             ProductDetailService = new ProductDetailService();
             Product = ProductDetailService.GetProductByID(ProductID);
+            AndHUD.Shared.Dismiss(this);
 
             ProductImageURLsService = new ProductImageURLsService();
 
