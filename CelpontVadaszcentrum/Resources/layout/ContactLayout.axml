@@ -7,7 +7,8 @@
     android:minHeight="25px"
     android:paddingTop="10dp"
     android:paddingBottom="10dp"
-    android:paddingLeft="20dp">
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
     <TextView
         android:text="Kapcsolat"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/textView2" />
-  <TextView
+    <TextView
         android:text="Hétfő - Péntek: 9h-17h"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,7 +47,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="20dp"
         android:id="@+id/textView6" />
-  <TextView
+    <TextView
         android:text="+36 30/9166-617"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,7 +59,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/textView7" />
-  <TextView
+    <TextView
         android:text="celpont.kantor@gmail.com"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,4 +69,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/email2TXT" />
+  <TextView
+    android:text="Cím:"
+    android:paddingTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:id="@+id/textView8" />
+  <TextView
+      android:text="9915, Nádasd Hegyaljai u. 9."
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/addressTXT" />
+    <ImageView
+        android:src="@drawable/maps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mapsImageView" />
 </LinearLayout>

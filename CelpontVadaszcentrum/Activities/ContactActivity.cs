@@ -18,6 +18,7 @@ namespace CelpontVadaszcentrum.Activities
         private TextView PhoneNumber;
         private TextView Email1;
         private TextView Email2;
+        private ImageView Maps;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -31,6 +32,14 @@ namespace CelpontVadaszcentrum.Activities
             PhoneNumber.Click += PhoneNumber_Click;
             Email1.Click += Email1_Click;
             Email2.Click += Email2_Click;
+            Maps.Click += Maps_Click;
+        }
+
+        private void Maps_Click(object sender, EventArgs e)
+        {
+            var geoUri = Android.Net.Uri.Parse("geo:46.9873956,16.6166643,17");            
+            var mapIntent = new Intent(Intent.ActionView, geoUri);
+            StartActivity(mapIntent);
         }
 
         private void Email2_Click(object sender, EventArgs e)
@@ -63,6 +72,7 @@ namespace CelpontVadaszcentrum.Activities
             PhoneNumber = FindViewById<TextView>(Resource.Id.phoneNumberTXT);
             Email1 = FindViewById<TextView>(Resource.Id.email1TXT);
             Email2 = FindViewById<TextView>(Resource.Id.email2TXT);
+            Maps = FindViewById<ImageView>(Resource.Id.mapsImageView);
         }
     }
 }
